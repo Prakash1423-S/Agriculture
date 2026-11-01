@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriPulse AI | Global Agriculture Intelligence & Advisory Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-icon">🌾</div>
+      <div class="logo-text">
+        <h1>AgriPulse AI</h1>
+        <p>Global Agronomic Intelligence & Geo-Problem Resolution Engine</p>
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="nav-btn active" data-tab="tab-qa">
+        <span>💬</span> AI Agri-Advisor Q&A
+      </button>
+      <button class="nav-btn" data-tab="tab-geo">
+        <span>🗺️</span> Geo-Problem Matrix
+      </button>
+      <button class="nav-btn" data-tab="tab-vision">
+        <span>🔬</span> Leaf Vision Doctor
+      </button>
+      <button class="nav-btn" data-tab="tab-case-study">
+        <span>📑</span> Case Study & ROI
+      </button>
+      <button class="nav-btn" data-tab="tab-arch">
+        <span>📐</span> Architecture & API
+      </button>
+    </nav>
+
+    <div class="badge-status">
+      <div class="pulse-dot"></div>
+      <span>Systems Operational</span>
+    </div>
+  </header>
+
+  <!-- Main Workspace Container -->
+  <main class="container">
+
+    <!-- Hero Stats Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h2>Smart Agronomic Intelligence for Every Acre</h2>
+        <p>
+          Empowering smallholder and commercial farmers with real-time, science-backed guidance—solving localized water scarcity, pest outbreaks, and soil degradation across states, countries, and micro-climates.
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <div class="num">28%</div>
+          <div class="label">Yield Gain</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="num">35%</div>
+          <div class="label">Cost Cut</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="num">40%</div>
+          <div class="label">Water Saved</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="num">&lt;3s</div>
+          <div class="label">AI Latency</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: AI AGRI-ADVISOR Q&A ENGINE -->
+    <section id="tab-qa" class="tab-pane active">
+      <div class="qa-layout">
+        <!-- Sidebar with Presets & Geo-Context -->
+        <aside class="qa-sidebar">
+          <h3><span>⚙️</span> Farm Context</h3>
+          <div class="filter-group">
+            <label for="userRegionSelect">Region / Country</label>
+            <select id="userRegionSelect" class="form-input">
+              <option value="India - Maharashtra">India - Maharashtra (Vidarbha)</option>
+              <option value="India - Punjab">India - Punjab & Haryana</option>
+              <option value="India - Rajasthan">India - Rajasthan (Arid)</option>
+              <option value="India - UP/Bihar">India - UP & Bihar (Gangetic)</option>
+              <option value="India - South">India - AP, Telangana & Karnataka</option>
+              <option value="USA - California">USA - California Central Valley</option>
+              <option value="USA - Midwest">USA - Midwest Corn Belt</option>
+              <option value="Kenya - Rift Valley">Kenya - Rift Valley</option>
+              <option value="Vietnam - Mekong">Vietnam - Mekong Delta</option>
+              <option value="Spain - Andalusia">Spain - Andalusia / Almería</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="userCropSelect">Primary Crop</label>
+            <select id="userCropSelect" class="form-input">
+              <option value="Cotton">Cotton</option>
+              <option value="Rice (Paddy)">Rice (Paddy)</option>
+              <option value="Wheat">Wheat</option>
+              <option value="Corn / Maize">Corn / Maize</option>
+              <option value="Tomato">Tomato & Vegetables</option>
+              <option value="Soybean">Soybean</option>
+              <option value="Almonds">Almonds & Tree Nuts</option>
+            </select>
+          </div>
+
+          <h3 style="margin-top: 0.5rem;"><span>💡</span> Common Questions</h3>
+          <div class="prompt-chips">
+            <button class="chip-btn" data-prompt="Why are my tomato leaves turning yellow and curling upwards?">
+              🍅 Tomato leaves yellowing & curling
+            </button>
+            <button class="chip-btn" data-prompt="How to manage pink bollworm in Bt-cotton without dangerous chemicals?">
+              🌱 Pink bollworm control in cotton
+            </button>
+            <button class="chip-btn" data-prompt="What is the best drip irrigation schedule for sandy loam soil in summer?">
+              💧 Drip schedule for sandy loam soil
+            </button>
+            <button class="chip-btn" data-prompt="How to stop groundwater depletion and manage stubble in Punjab paddy?">
+              🌾 Groundwater & stubble in Punjab
+            </button>
+            <button class="chip-btn" data-prompt="How to control fall armyworm in maize organically?">
+              🌽 Fall armyworm bio-control in maize
+            </button>
+            <button class="chip-btn" data-prompt="How to reclaim alkaline soil with high salinity using gypsum?">
+              🧪 Soil salinity & gypsum reclamation
+            </button>
+            <button class="chip-btn" data-prompt="What is the best post-harvest selling strategy for wheat and onion mandis?">
+              📈 Mandi price & warehouse monetization
+            </button>
+          </div>
+        </aside>
+
+        <!-- Main Chat Stream -->
+        <div class="qa-main">
+          <div class="chat-messages" id="chatMessages">
+            <!-- Welcome message -->
+            <div class="msg-wrapper ai">
+              <div class="avatar ai-av">🌾</div>
+              <div class="bubble">
+                <p><strong>Welcome to AgriPulse AI Chief Agronomist!</strong></p>
+                <p style="margin-top: 0.35rem; color: var(--text-muted); font-size: 0.88rem;">
+                  I provide hyper-localized, science-grounded agronomic prescriptions across all crops, soils, pest outbreaks, irrigation schedules, and market pricing. Ask me any question below or click a topic on the left!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input bar -->
+          <div class="chat-input-container">
+            <form id="chatForm" class="chat-input-form">
+              <input 
+                type="text" 
+                id="chatInput" 
+                placeholder="Ask any question on pests, soils, fertilizers, irrigation, crops, or market prices..." 
+                autocomplete="off"
+              />
+              <button type="submit" class="send-btn">
+                <span>Ask AI</span> <span>➔</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: GEO-PROBLEM SOLVER MATRIX -->
+    <section id="tab-geo" class="tab-pane">
+      <div class="geo-controls">
+        <div class="control-item">
+          <label for="geoCountryFilter">Filter by Country</label>
+          <select id="geoCountryFilter" class="form-input">
+            <option value="ALL">All Countries (Global)</option>
+            <option value="India">India</option>
+            <option value="United States">United States</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Spain">Spain</option>
+            <option value="Brazil">Brazil</option>
+          </select>
+        </div>
+
+        <div class="control-item">
+          <label for="geoCategoryFilter">Threat Category</label>
+          <select id="geoCategoryFilter" class="form-input">
+            <option value="ALL">All Categories</option>
+            <option value="water">Water Scarcity & Depletion</option>
+            <option value="pest">Pest & Disease Epidemics</option>
+            <option value="soil">Soil Degradation & Salinity</option>
+            <option value="climate">Climate Extremes & Inundation</option>
+          </select>
+        </div>
+
+        <div class="control-item" style="flex: 2;">
+          <label for="geoSearchInput">Search Specific Problem, State, or Crop</label>
+          <input type="text" id="geoSearchInput" class="form-input" placeholder="e.g. Punjab, Cotton, California, Salinity, Thrips...">
+        </div>
+      </div>
+
+      <!-- Problem Cards Matrix -->
+      <div class="matrix-grid" id="matrixGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 3: LEAF VISION DOCTOR -->
+    <section id="tab-vision" class="tab-pane">
+      <div class="scanner-container">
+        <div class="sample-leaf-picker">
+          <h3 style="font-size: 0.95rem; color: var(--text-dim); text-transform: uppercase;">Select Leaf Sample</h3>
+          <button class="leaf-sample-btn active" data-sample="tomato">
+            <span class="leaf-icon">🍅</span>
+            <div>
+              <strong>Tomato Leaf</strong>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Suspected early blight lesions</div>
+            </div>
+          </button>
+          <button class="leaf-sample-btn" data-sample="cotton">
+            <span class="leaf-icon">🌱</span>
+            <div>
+              <strong>Cotton Leaf</strong>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Angular leaf spots & veinal rot</div>
+            </div>
+          </button>
+          <button class="leaf-sample-btn" data-sample="rice">
+            <span class="leaf-icon">🌾</span>
+            <div>
+              <strong>Rice Foliage</strong>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Spindle lesions & blast symptoms</div>
+            </div>
+          </button>
+          <button class="leaf-sample-btn" data-sample="corn">
+            <span class="leaf-icon">🌽</span>
+            <div>
+              <strong>Maize Whorl</strong>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Fall armyworm frass damage</div>
+            </div>
+          </button>
+          <button class="leaf-sample-btn" data-sample="healthy">
+            <span class="leaf-icon">🌿</span>
+            <div>
+              <strong>Citrus Sapling</strong>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Healthy foliage control sample</div>
+            </div>
+          </button>
+
+          <button id="triggerScanBtn" class="send-btn" style="margin-top: 1rem; width: 100%; justify-content: center;">
+            <span>Run Vision Diagnostic Scan</span>
+          </button>
+        </div>
+
+        <div class="scanner-display">
+          <div class="scan-radar" id="scanRadarIcon">🔍</div>
+          <h3 id="scanRadarTitle" style="color: #fff; margin-bottom: 0.3rem;">Ready to Diagnose Foliage</h3>
+          <p id="scanRadarStatus" style="font-size: 0.85rem; color: var(--text-muted);">
+            Select a sample on the left and click "Run Vision Diagnostic Scan"
+          </p>
+          <div id="scanRadarDetails" style="width: 100%; max-width: 600px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: CASE STUDY & ROI OVERVIEW -->
+    <section id="tab-case-study" class="tab-pane">
+      <div class="arch-panel" style="margin-bottom: 1.5rem;">
+        <h3><span>📑</span> AgriPulse AI: Executive Case Study Breakdown</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          AgriPulse AI solves the critical information divide between academic agricultural research and rural smallholders. Below is a structured summary of the operational deployment, target personas, and verified ROI metrics.
+        </p>
+
+        <div class="action-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="action-card prevention">
+            <div class="card-tag">👤 Smallholder Farmers</div>
+            <p><strong>Profile:</strong> 0.5 - 2 hectares, voice-first, low digital literacy.</p>
+            <p><strong>Solution:</strong> WhatsApp/Telegram bot & 2G USSD audio guidance in native languages, reducing reliance on biased chemical dealers.</p>
+          </div>
+          <div class="action-card organic">
+            <div class="card-tag">🏢 Commercial Agro-Enterprises</div>
+            <p><strong>Profile:</strong> 500+ acres, export-oriented, ESG & residue compliant.</p>
+            <p><strong>Solution:</strong> OpenET satellite evapotranspiration, variable rate nitrogen mapping, and export MRL compliance tracking.</p>
+          </div>
+          <div class="action-card chemical">
+            <div class="card-tag">🏛️ Agricultural Extension & Governments</div>
+            <p><strong>Profile:</strong> 1:2,500 officer-to-farmer deficit, water table monitoring.</p>
+            <p><strong>Solution:</strong> Outbreak early warning heatmaps, satellite drought indexing, and automated subsidy verification.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-grid">
+        <div class="arch-panel">
+          <h3><span>📊</span> Measurable Economic & Ecological Impact</h3>
+          <div class="flow-step-list">
+            <div class="flow-step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>22% - 35% Input Cost Reduction</h4>
+                <p>Prevented over-application of synthetic urea and unnecessary broad-spectrum chemical sprays through precision IPM protocols.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>18% - 28% Crop Yield Enhancement</h4>
+                <p>Immediate 24-hour intervention against fungal blights and insect vectors before irreversible canopy defoliation occurs.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>30% - 45% Irrigation Water Conservation</h4>
+                <p>IoT soil tensiometer and satellite ET-driven scheduling preventing excessive flood pumping in over-extracted aquifers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-panel">
+          <h3><span>💼</span> Business Model & Monetization Strategy</h3>
+          <div class="flow-step-list">
+            <div class="flow-step-item">
+              <div class="step-num">A</div>
+              <div class="step-text">
+                <h4>Farmer Freemium (B2C)</h4>
+                <p>Free core voice/text advisory; Pro tier ($3/month) unlocks unlimited satellite NDVI crop vigor scans and soil sensor telemetry.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">B</div>
+              <div class="step-text">
+                <h4>Agri-Enterprise & Insurance API (B2B SaaS)</h4>
+                <p>Parametric crop insurance providers license real-time satellite drought indices to automate claims settlement in days.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">C</div>
+              <div class="step-text">
+                <h4>Government Extension Digitization (B2G)</h4>
+                <p>National agricultural departments deploy AgriPulse white-labeled for regional extension workers to cover millions of smallholders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: ARCHITECTURE & API PLAYGROUND -->
+    <section id="tab-arch" class="tab-pane">
+      <div class="arch-grid">
+        <div class="arch-panel">
+          <h3><span>🛠️</span> Production Tech Stack</h3>
+          <div class="flow-step-list">
+            <div class="flow-step-item">
+              <div class="step-num">UI</div>
+              <div class="step-text">
+                <h4>Next.js 14 / Flutter PWA</h4>
+                <p>Offline-first local IndexedDB storage, WebAssembly model execution, and Whisper ASR audio processing.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">API</div>
+              <div class="step-text">
+                <h4>FastAPI Async Gateway</h4>
+                <p>High-throughput Python microservices orchestrating RAG queries and Computer Vision inference.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">DB</div>
+              <div class="step-text">
+                <h4>PostgreSQL 16 + PostGIS</h4>
+                <p>Geospatial polygon boundaries, field coordinates, and regional vulnerability tables.</p>
+              </div>
+            </div>
+            <div class="flow-step-item">
+              <div class="step-num">RAG</div>
+              <div class="step-text">
+                <h4>Qdrant Vector DB + Gemini 1.5</h4>
+                <p>Agronomic literature embeddings filtered by agro-climatic zones and safety verification guardrails.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-panel">
+          <h3><span>🧪</span> Live API Gateway Simulator</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+            Test the live backend response from the simulated <code>POST /api/v1/advisory/ask</code> endpoint:
+          </p>
+          <button id="simulateApiBtn" class="send-btn" style="margin-bottom: 1rem;">
+            <span>Simulate Async API Call</span> ➔
+          </button>
+          <div class="code-container" id="apiJsonOutput">
+// Click "Simulate Async API Call" to test the FastAPI response
+{
+  "endpoint": "POST /api/v1/advisory/ask",
+  "status": "ready"
+}
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-panel">
+        <h3><span>💾</span> PostGIS Core Database Schema (DDL)</h3>
+        <div class="code-container">
+-- PostGIS Schema for Geo-Agricultural Problem & Advisory Engine
+CREATE EXTENSION IF NOT EXISTS postgis;
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE geo_regions (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    country_code VARCHAR(3) NOT NULL,
+    state_province VARCHAR(100) NOT NULL,
+    agro_climatic_classification VARCHAR(100),
+    boundary GEOMETRY(MultiPolygon, 4326)
+);
+
+CREATE TABLE regional_problems (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    geo_region_id UUID REFERENCES geo_regions(id) ON DELETE CASCADE,
+    threat_category VARCHAR(50) NOT NULL,
+    threat_title VARCHAR(255) NOT NULL,
+    severity_level VARCHAR(20) NOT NULL,
+    root_cause_scientific TEXT NOT NULL,
+    immediate_farmer_action TEXT NOT NULL,
+    technological_intervention TEXT NOT NULL,
+    policy_subsidy_framework TEXT NOT NULL
+);
+
+CREATE INDEX idx_geo_boundary ON geo_regions USING GIST(boundary);
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>AgriPulse AI &copy; 2026. Global Agriculture Intelligence, Q&A Advisory & Geo-Problem Resolution Engine.</p>
+    <p style="margin-top: 0.25rem;">Built with science-backed ICAR, FAO, CGIAR & USDA agronomic protocols.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
